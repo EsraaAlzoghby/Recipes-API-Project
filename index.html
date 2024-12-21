@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipes & modal Details Data</title>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black">
+<!-- card -->
+<section class="my-3">
+    <div class="container">
+        <h1 class="text-warning text-center">recipes & modal Details Data</h1>
+        <div class="d-flex justify-content-center my-5 flex-wrap">
+        <input list="test" class="form-control w-50" type="search" placeholder="Ex:carrot" aria-label="default input example">
+        <datalist id="test">
+          <option value="carrot"></option>
+          <option value="cherry"></option>
+          <option value="mango"></option>
+          <option value="chocolate"></option>
+          <option value="cake"></option>
+          <option value="kebab"></option>
+          <option value="chicken"></option>
+        </datalist>
+        <button type="button" class="btn btn-warning px-5 mx-2" id="buttonSearch">Search</button>
+        <div class="alert alert-warning w-50 mt-3 d-none" role="alert" id="alertData">
+            "No results found for your search. Please try again later."
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-5" id="rowData"></div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="modal-title"> </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- loading -->
+<div class="loading d-none" id="loading">
+    <span class="loader"></span>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
